@@ -1,34 +1,16 @@
-#include <bits/stdc++.h>
+import math from *
 
-using namespace std;
+# Complete the solve function below.
+def solve(meal_cost, tip_percent, tax_percent):
 
-// Complete the solve function below.
+    total_cost =  meal_cost + meal_cost * tip_percent/100 + meal_cost * tax_percent/100
+    print(round(total_cost))
 
-void solve(double meal_cost, int tip_percent, int tax_percent) {
+if __name__ == '__main__':
+    meal_cost = float(input())
 
-int total_cost;
-total_cost =  meal_cost + meal_cost * tip_percent/100 + meal_cost * tax_percent/100;
-    cout << total_cost <<endl;
-}
+    tip_percent = int(input())
 
-int main()
-{
-    double meal_cost;
-    cin >> meal_cost;
-    //sets the maximum number of characters to ignore.
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    tax_percent = int(input())
 
-    int tip_percent;
-    cin >> tip_percent;
-    //sets the maximum number of characters to ignore.
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-    int tax_percent;
-    cin >> tax_percent;
-    //sets the maximum number of characters to ignore.
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-    solve(meal_cost, tip_percent, tax_percent);
-
-    return 0;
-}
+    solve(meal_cost, tip_percent, tax_percent)
